@@ -1,10 +1,5 @@
 {
-  "extends": [
-    "eslint:recommended",
-    "plugin:react/recommended",
-    "plugin:react/jsx-runtime",
-    "prettier"
-  ],
+  "extends": ["airbnb", "prettier", "prettier/react"],
   "env": {
     "browser": true
   },
@@ -15,13 +10,18 @@
     },
     "sourceType": "module"
   },
+
   "settings": {
     "react": {
       "version": "detect"
     }
   },
   "rules": {
-    "react/prop-types": "off",
-    "no-unused-vars": "warn"
+    "no-plusplus": [0],
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+    "react/prop-types": [0],
+    "react/jsx-props-no-spreading": [0],
+    "import/prefer-default-export": [0],
+    "react/no-array-index-key": [0]
   }
 }
