@@ -5,15 +5,23 @@ import { render } from 'react-dom';
 const Board = () => {
   const [squares, setsquares] = useState(Array(9).fill(null));
 
+  const [isNext, setisNext] = useState(false);
+
   const handlesquareClick = clickposition => {
+    if (squares[clickposition]) {
+      return;
+    }
+
     setsquares(currentSquares => {
       return currentSquares.map((squareValue, position) => {
         if (clickposition == position) {
-          return 'X';
+          return isNext ? 'X' : 'O';
         }
         return squareValue;
       });
     });
+
+    setisNext(currentisNext => !currentisNext);
   };
 
   const renderSquare = position => {
