@@ -7,6 +7,7 @@ git commit -m "" (commit the files)
 npm run dev (to run the project)
 
 Dependency to Download
+install node Modules (npm install)
 
 1. Sass
 2. Scss
